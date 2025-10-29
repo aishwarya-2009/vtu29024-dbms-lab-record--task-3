@@ -1,0 +1,51 @@
+The Employee table structure is:
+
+Employee(EmpID, EmpName, Dept, Salary, JoiningDate, City)
+
+3.1 Perform DML Operations
+a) Insert new employee
+
+Let’s insert a new record into the Employee table.
+
+INSERT INTO Employee (EmpID, EmpName, Dept, Salary, JoiningDate, City)
+VALUES (111, 'Laura King', 'Finance', 85000.00, '2024-04-10', 'Boston');
+
+
+✅ Explanation:
+A new employee “Laura King” has been added to the Finance department.
+
+b) Update salary of employees in IT department by 10%
+
+We’ll increase the salary of all IT employees by 10%.
+
+UPDATE Employee
+SET Salary = Salary * 1.10
+WHERE Dept = 'IT';
+
+
+✅ Explanation:
+All employees in the IT department (EmpID: 101, 104, 106, 110) will get a 10% salary increase.
+
+c) Delete employees who joined before 2015
+
+We’ll remove employees who joined before January 1, 2015.
+
+DELETE FROM Employee
+WHERE JoiningDate < '2015-01-01';
+
+
+✅ Explanation:
+This query deletes employees who joined before 2015, e.g., Jack Turner (EmpID 110).
+
+✅ Result Summary After Operations
+EmpID	EmpName	Dept	Salary	JoiningDate	City
+101	Alice Johnson	IT	77000.00	2023-05-01	New York
+102	Bob Smith	HR	55000.00	2018-03-15	Chicago
+103	Carol White	Finance	80000.00	2016-11-23	San Francisco
+104	David Brown	IT	82500.00	2020-07-10	New York
+105	Eve Davis	Marketing	60000.00	2019-02-28	Los Angeles
+106	Frank Miller	IT	79200.00	2021-08-16	Boston
+107	Grace Lee	HR	52000.00	2017-04-05	Chicago
+108	Henry Wilson	Finance	81000.00	2015-09-30	San Francisco
+109	Isabel Clark	Marketing	63000.00	2022-01-12	Los Angeles
+111	Laura King	Finance	85000.00	2024-04-10	Boston
